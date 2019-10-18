@@ -1,5 +1,5 @@
 # Sprint Challenge: JavaScript Fundamentals
-
+ 
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a survey of problems. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied variables, functions, object literals, arrays, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a survey of JavaScript problems.
 
 ## Instructions
@@ -30,13 +30,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach doesn't return anything and .map returns a new array.
+
 2. What is the difference between a function and a method?
 
+Every function is an object. A method is a function in an object, or a function in a function. You could say that if no object is associated, it's a function, when there is, it's a method.
+
 3. What is closure?
+Closure refers to a function and it's scope (and how it relates to the functions around it). An outer function will have access to an inner function's scope, but not the other way around.
 
 4. Describe the four rules of the 'this' keyword.
 
+ 1. Global/Window Binding
+When using 'this' in the global scope, 'this' will refer to the window/console object. When it's used outside of any function, the console will display all the global properties in the console.
+
+ 2. Implicit Binding
+When you have an object that utilizes a method, you can use 'this' to refer to a function you will invoke at a later time. It's important to remember that it matters where the function is invoked, not where it is declared. The shortcut way to identify what function is being called is to look to the left of the '.' or 'dot' in the invocation, e.g. myFunction.test(); In this example, test would be the method 'this' is referring to. 
+
+ 3. Explicit Binding
+When using 'this' in this context, you will tell the function where exactly it needs to go to find the object 'this' is looking for. Explicit Binding takes advantage of several methods like call, apply, and bind to be able to tell where 'this' should reference despite where it was called. This can be helpful for callbacks. When using call and apply, it will immediately invoke the function, but when using bind, it can be invoked at a later time. 
+
+ 4. New Binding 
+When using the 'new' keyword, you construct a new, empty object and JS saves it as 'this'. You create a Constructor function (by using a capital first letter of the variable). When a function is invoked with the 'new' keyword, the 'this' keyword is being bound to the newly constructed object. 
+
 5. Why do we need super() in an extended class?
+Super() is always used with extends and tells you what attributes you're inheriting from the higher Class, typically a Parent function.
 
 ## Project Set up
 
